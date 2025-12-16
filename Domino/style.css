@@ -1,0 +1,97 @@
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100vh;
+    align-items: center;
+    justify-items: center;
+    background: #2c3e50;
+}
+
+/* PUNTOS */
+.punto {
+    width: 26px;
+    height: 26px;
+    background: #000;
+    border-radius: 50%;
+}
+
+/* FICHAS DE DOMINÓ */
+.ficha {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    width: 130px;
+    height: 320px;
+    background: #f5f5f5;
+    border: 3px solid #111;
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
+
+/* SUPERIOR GENERAL */
+.ficha1 .superior,
+.ficha2 .superior,
+.ficha3 .superior,
+.ficha4 .superior {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 3px solid #111;
+    padding: 8px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* INFERIOR GENERAL */
+.ficha1 .inferior,
+.ficha2 .inferior,
+.ficha3 .inferior,
+.ficha4 .inferior {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 8px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* COLUMNAS VERTICALES */
+.izquierda,
+.derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}
+
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* AJUSTES ESPECÍFICOS */
+.ficha2 .inferior .izquierda {
+    justify-content: flex-end;
+}
+
+.ficha2 .inferior .derecha {
+    justify-content: flex-start;
+}
+
+.ficha3 .inferior .izquierda {
+    justify-content: flex-end;
+}
+
+.ficha3 .inferior .centro {
+    justify-content: center;
+}
+
+.ficha3 .inferior .derecha {
+    justify-content: flex-start;
+}
+
+.ficha4 .inferior .izquierda,
+.ficha4 .inferior .derecha {
+    justify-content: space-between;
+}
